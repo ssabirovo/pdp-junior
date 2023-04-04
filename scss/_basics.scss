@@ -1,0 +1,23 @@
+$main: #071c35;
+$textGrey: #777777;
+$lightGrey: #e9e9ea;
+$white: #fff;
+
+@font-face {
+  font-family: Alethia;
+  src: url(../fonts/alethiapro-regular.otf);
+}
+
+@mixin d-flex($j-s: center, $a-i: center, $f-d: row, $gap: 0px) {
+  display: flex;
+  justify-content: $j-s;
+  align-items: $a-i;
+  flex-direction: $f-d;
+  gap: $gap;
+}
+%f-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}

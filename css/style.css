@@ -1,0 +1,39 @@
+*,
+p,
+h1 {
+  font-family: Alethia;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 12%;
+}
+
+@font-face {
+  font-family: Alethia;
+  src: url(../fonts/alethiapro-regular.otf);
+}
+@media (max-width: 1200px) {
+  section {
+    padding: 3rem 6%;
+  }
+}
+@media (max-width: 991px) {
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 500px) {
+  section {
+    padding: 3rem 0.8rem;
+  }
+}
