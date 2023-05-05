@@ -1,7 +1,15 @@
-@import "_navbar";
-@import "_head";
+@import "_theme";
 @import "_basics";
+@import "_head";
+@import "_navbar";
 @import "_header";
+@import "_whom";
+@import "_courses";
+
+body {
+  background-color: $main;
+  cursor: url("../images/cursor.svg"), auto;
+}
 
 // media
 @media (max-width: 1200px) {

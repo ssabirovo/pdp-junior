@@ -1,0 +1,43 @@
+.whom {
+  min-height: 100vh;
+  background-color: $white;
+  border-radius: 24px;
+  background-image: url("../images/courses-bg.png");
+  background-position: center;
+  background-size: cover;
+  padding: 0.5rem 9%;
+  &_card {
+    max-width: 600px;
+    color: $main;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    strong {
+      font-weight: 800;
+      font-size: 28px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 27px;
+      padding-top: 5px !important;
+      padding-bottom: 30px !important;
+    }
+    li {
+      font-weight: 400;
+      font-size: 21px;
+      padding-top: 10px;
+      // line-height: 27px;
+    }
+    @media (max-width: 540px) {
+      strong {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+}

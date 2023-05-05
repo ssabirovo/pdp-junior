@@ -1,6 +1,67 @@
 .navbar {
+  padding: 0.5rem 9%;
+  background: linear-gradient(89.9deg, $main 43.9%, $secondary 80.17%);
+  border-radius: 24px;
+  height: 8vh;
+
+  &_left {
+    gap: 30px;
+
+    img {
+      width: 121px;
+    }
+    a {
+      text-decoration: none;
+      color: $secondary;
+      font-family: "K2D";
+      font-size: 20px;
+      line-height: 26px;
+      cursor: url("../images/cursor-pointer.svg"), auto;
+      @media (max-width: 730px) {
+        display: none;
+      }
+    }
+  }
+  &_right {
+    color: $main;
+    @media (max-width: 730px) {
+      display: none !important;
+    }
+
+    cursor: url("../images/cursor-pointer.svg"), auto;
+    * {
+      transition: 0.3s linear;
+    }
+    p {
+      font-family: "K2D";
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &:hover {
+      i {
+        animation-name: rotatePhone;
+        animation-duration: 0.3s;
+      }
+    }
+  }
+  &_hamBar {
+    display: none;
+    @media (max-width: 730px) {
+      display: inline;
+    }
+  }
 }
 
-h1 {
-  // font-family: Alethia, sans-serif;
+@keyframes rotatePhone {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
