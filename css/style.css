@@ -242,9 +242,18 @@ body {
   max-width: 100%;
   transform: rotate(2.5deg);
   padding: 0 0.5rem;
+  transition: 0.2s linear;
+}
+.courses_card:hover {
+  transform: rotate(0deg);
+  padding: 0;
 }
 .courses_card_content {
   transform: rotate(-2.5deg);
+  transition: 0.1s linear;
+}
+.courses_card_content:hover {
+  transform: rotate(0deg);
 }
 @media (max-width: 860px) {
   .courses_card_content {
@@ -273,18 +282,180 @@ body {
 .courses_card_content_info_badge {
   background: #00b534 !important;
 }
+@media (max-width: 540px) {
+  .courses_card_content_info_badge {
+    font-size: 18px;
+  }
+}
 .courses_card_content_info li {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   letter-spacing: 0.04em;
 }
-.courses_card_content_info p {
+.courses_card_content_info b {
   font-style: normal;
   font-weight: 800;
   font-size: 26px;
   line-height: 34px;
   color: #00b534;
+}
+.courses_card_content_info_status {
+  gap: 3rem;
+}
+@media (max-width: 860px) {
+  .courses_card_content_info_status {
+    justify-content: center;
+  }
+}
+@media (max-width: 540px) {
+  .courses_card_content_info_status {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.contacts {
+  height: max-content;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 5.5rem 1%;
+}
+.contacts_news,
+.contacts button {
+  color: #ffffff;
+  padding: 1rem;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 36px;
+  background-color: #00b534;
+  border-radius: 16px;
+  transition: 0.1s linear;
+}
+@media (max-width: 600px) {
+  .contacts_news {
+    width: 330px;
+    text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .contacts_news {
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+.contacts h4 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 42px;
+  padding-top: 5rem;
+}
+@media (max-width: 430px) {
+  .contacts h4 {
+    font-size: 24px;
+  }
+}
+.contacts p {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 27px;
+  color: #777777;
+}
+@media (max-width: 590px) {
+  .contacts p {
+    text-align: center;
+    width: 80%;
+  }
+}
+.contacts_form {
+  padding: 2rem 0rem;
+}
+@media (max-width: 890px) {
+  .contacts_form {
+    flex-direction: column;
+  }
+}
+.contacts_form_input,
+.contacts_form input {
+  background-color: #dbf9d8;
+  padding: 0.5rem 1.4rem;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 29px;
+}
+@media (max-width: 430px) {
+  .contacts_form_input,
+.contacts_form input {
+    font-size: 20px;
+  }
+}
+.contacts_form input {
+  padding: 0.5rem 0.4rem;
+}
+@media (max-width: 430px) {
+  .contacts_form input {
+    width: 65%;
+  }
+}
+.contacts button:hover {
+  background-color: #88f036;
+  color: #012a30;
+}
+
+.map {
+  height: 60vh;
+  border-radius: 24px;
+  overflow: hidden;
+}
+@media (max-width: 890px) {
+  .map {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+}
+.map_img {
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  background-image: url("../images/building.png");
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 890px) {
+  .map_img {
+    width: 100%;
+    height: 50%;
+  }
+}
+.map_img_content {
+  background-color: #ffffff;
+  width: max-content;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.map_img_content_logo {
+  background-color: #012a30;
+}
+.map_img_content_logo img {
+  width: 70%;
+}
+.map_img_content p {
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 300px;
+}
+@media (max-width: 890px) {
+  .map iframe {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.footer {
+  color: #ffffff;
 }
 
 body {
