@@ -33,16 +33,30 @@
     <div class="navbar">
       <div class="navbar_left d-flex align-items-center">
         <img src="./images/jun-logo.png" alt="" />
-        <a href="#">Kurslarimz</a>
-        <a href="#">Bog’lanish</a>
+        <a href="#courses">Kurslarimz</a>
+        <a href="#contacts">Bog’lanish</a>
       </div>
       <div class="navbar_right d-flex align-items-center gap-3">
         <i class="fa-solid fa-phone"></i>
-        <p>(78) 777-47-47</p>
+        <a href="tel: +998787774747">(78) 777-47-47</a>
       </div>
-
-      <i class="fa-solid fa-bars-staggered navbar_hamBar"></i>
+      <div class="navbar_hamBar">
+        <i class="fa-2x fa-solid fa-bars-staggered navbar_hamBar"></i>
+      </div>
     </div>
+
+    <!-- dropdown menu -->
+
+    <div class="dropDownMenu">
+      <a href="#courses">Kurslarimz</a>
+      <a href="#contacts">Bog’lanish</a>
+      <div class="d-flex align-items-center gap-3">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel: +998787774747">(78) 777-47-47</a>
+      </div>
+    </div>
+
+    <!-- dropdown menu -->
 
     <!-- header? -->
     <div class="header d-flex justify-content-start align-items-center">
@@ -141,7 +155,10 @@
     </div>
 
     <!-- our courses -->
-    <div class="title d-flex justify-content-center align-items-center w-100">
+    <div
+      id="courses"
+      class="title d-flex justify-content-center align-items-center w-100"
+    >
       <h3>PDP Junior kurslari</h3>
     </div>
 
@@ -300,7 +317,10 @@
     </div>
     <!-- our courses -->
 
-    <div class="title d-flex justify-content-center align-items-center w-100">
+    <div
+      id="contacts"
+      class="title d-flex justify-content-center align-items-center w-100"
+    >
       <h3>Bog'lanish uchun</h3>
     </div>
 
@@ -317,11 +337,17 @@
       <div class="contacts_form d-flex gap-4">
         <div class="contacts_form_input">
           Ismingiz:
-          <input type="text" class="contacts_form_input" />
+          <input name="name" type="text" class="contacts_form_input" />
         </div>
 
         <div class="contacts_form_input">
-          +998<input type="text" placeholder="-- --- -- --" />
+          +998<input
+            id="phoneNumber"
+            onkeypress="phoneFormatter()"
+            type="text"
+            inputmode="numeric"
+            placeholder="-- --- -- --"
+          />
         </div>
       </div>
       <button>Yuborish</button>
@@ -357,16 +383,25 @@
     <!-- footer -->
 
     <div class="footer">
-      <div>
+      <div class="footer_up d-flex justify-content-between align-items-center">
         <img src="./images/jun-logo.png" alt="" />
-        <div class="">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-telegram"></i>
+        <div class="footer_up_links d-flex justify-content-between gap-4">
+          <a target="_blank" href="https://www.instagram.com/pdpuz.junior/"
+            ><i class="fa-2x fa-brands fa-instagram"></i
+          ></a>
+
+          <a target="_blank" href="https://www.youtube.com/@pdp_junior"
+            ><i class="fa-2x fa-brands fa-youtube"></i
+          ></a>
+          <a target="_blank" href="https://t.me/PDPJunior"
+            ><i class="fa-2x fa-brands fa-telegram"></i
+          ></a>
         </div>
-        <p>(78) 777-47-47</p>
+        <a href="tel: +998787774747">(78) 777-47-47</a>
       </div>
-      <div>
+      <div
+        class="footer_down d-flex justify-content-between align-items-center"
+      >
         <p>©2022 PDP Academy</p>
         <p>Xizmatlar litsenziyalangan</p>
       </div>
@@ -377,5 +412,47 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const toggleBtn = document.querySelector(".navbar_hamBar");
+      const toggleBtnIcon = document.querySelector(".navbar_hamBar i");
+      const dropDownMenu = document.querySelector(".dropDownMenu");
+
+      toggleBtn.onclick = () => {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-2x fa-solid fa-xmark"
+          : "fa-2x fa-solid fa-bars-staggered";
+      };
+
+      function formatPhoneNumber(value) {
+        if (!value) return value;
+
+        const phoneNumber = value.replace(/[^\d]/g, "");
+
+        if (phoneNumber.length < 2) return phoneNumber;
+        if (phoneNumber.length < 5) {
+          return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`;
+        }
+        if (phoneNumber.length < 7)
+          return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(
+            2,
+            5
+          )}-${phoneNumber.slice(5, 7)}`;
+
+        return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(
+          2,
+          5
+        )}-${phoneNumber.slice(5, 7)}-${phoneNumber.slice(7, 8)}`;
+      }
+
+      function phoneFormatter(params) {
+        const input = document.getElementById("phoneNumber");
+        const pnone = input.value;
+        const formattedValue = formatPhoneNumber(pnone);
+        input.value = formattedValue;
+      }
+    </script>
   </body>
 </html>

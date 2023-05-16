@@ -57,6 +57,7 @@
       font-weight: 800;
       font-size: 22px;
       line-height: 29px;
+
       @media (max-width: 430px) {
         font-size: 20px;
       }
@@ -66,6 +67,11 @@
       @media (max-width: 430px) {
         width: 65%;
       }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      box-shadow: 0 0 0 30px $lightGreen inset;
     }
   }
   button:hover {

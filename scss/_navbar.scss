@@ -24,6 +24,12 @@
   }
   &_right {
     color: $main;
+
+    a {
+      text-decoration: none;
+      color: $main;
+      cursor: url("../images/cursor-pointer.svg"), auto;
+    }
     @media (max-width: 730px) {
       display: none !important;
     }
@@ -51,7 +57,6 @@
     }
   }
 }
-
 @keyframes rotatePhone {
   0% {
     transform: rotate(-30deg);
@@ -64,4 +69,30 @@
   100% {
     transform: rotate(0);
   }
+}
+
+.dropDownMenu {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  z-index: 1;
+  position: absolute;
+  right: (3%);
+  top: 9vh;
+  background-color: $secondary;
+  gap: 20px;
+  height: 0;
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+
+  a {
+    color: $main;
+    text-decoration: none;
+  }
+}
+.dropDownMenu.open {
+  display: flex;
+  height: max-content;
+  padding: 1rem;
 }

@@ -1,3 +1,50 @@
-.footer{
-    color: $white;
+.footer {
+  color: $white;
+  padding: 0.5rem 9%;
+  color: $lightGreen;
+  &_up {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $lightGreen;
+    i {
+      cursor: url("../images/cursor-pointer.svg"), auto;
+    }
+    img {
+      width: 100px;
+      cursor: url("../images/cursor-pointer.svg"), auto;
+    }
+    a {
+      text-decoration: none;
+      color: $lightGreen;
+      font-weight: 700;
+      font-size: 20px;
+      cursor: url("../images/cursor-pointer.svg"), auto;
+    }
+    &_linksSmall {
+      padding-bottom: 1.5rem;
+      display: none !important;
+      a {
+        text-decoration: none;
+        color: $lightGreen;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: url("../images/cursor-pointer.svg"), auto;
+      }
+      @media (max-width: 586px) {
+        display: flex !important;
+        border-bottom: 1px solid $lightGreen;
+      }
+    }
+    @media (max-width: 586px) {
+      &_links {
+        display: none !important;
+      }
+      border-bottom: none !important;
+    }
+  }
+  &_down {
+    padding: 1rem 0;
+    @media (max-width: 586px) {
+      flex-direction: column;
+    }
+  }
 }
