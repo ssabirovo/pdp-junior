@@ -5,7 +5,7 @@
   height: 8vh;
 
   &_left {
-    gap: 30px;
+    gap: 25px;
 
     img {
       width: 121px;
@@ -14,7 +14,7 @@
       text-decoration: none;
       color: $secondary;
       font-family: "K2D";
-      font-size: 20px;
+      font-size: 17px;
       line-height: 26px;
       cursor: url("../images/cursor-pointer.svg"), auto;
       @media (max-width: 730px) {
