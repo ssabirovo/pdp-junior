@@ -229,8 +229,9 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("../images/parents-bg.svg");
-  background-position: bottom, left;
-  background-size: cover;
+  background-position: bottom;
+  background-size: 100%, auto;
+  background-repeat: no-repeat;
 }
 .parents_videos {
   width: 100%;
@@ -334,6 +335,10 @@ body {
 .parents a:hover::after {
   right: 0;
   opacity: 1;
+}
+
+.students {
+  background-image: url("../images/junior-bg.svg");
 }
 
 .whom {

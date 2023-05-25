@@ -1,3 +1,4 @@
+
 .parents {
   min-height: max-content;
   background-color: $white;
@@ -8,8 +9,9 @@
   justify-content: center;
   align-items: center;
   background-image: url("../images/parents-bg.svg");
-  background-position: bottom, left;
-  background-size: cover;
+  background-position: bottom;
+  background-size: 100%, auto;
+  background-repeat: no-repeat;
 
   &_videos {
     width: 100%;
@@ -112,4 +114,7 @@
       opacity: 1;
     }
   }
+}
+.students{
+    background-image: url("../images/junior-bg.svg");
 }
