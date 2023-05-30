@@ -592,11 +592,15 @@ body {
 }
 .contacts_form {
   padding: 2rem 0rem;
+  width: 100%;
 }
 @media (max-width: 890px) {
   .contacts_form {
     flex-direction: column;
   }
+}
+.contacts_form_input {
+  width: 30%;
 }
 .contacts_form_input,
 .contacts_form input {
@@ -625,6 +629,7 @@ body {
 .contacts_form input:-webkit-autofill:hover,
 .contacts_form input:-webkit-autofill:focus {
   box-shadow: 0 0 0 30px #dbf9d8 inset;
+  color: #00b534 !important;
 }
 
 .map {

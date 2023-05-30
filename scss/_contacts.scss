@@ -118,8 +118,13 @@
   }
   &_form {
     padding: 2rem 0rem;
+    width: 100%;
+    
     @media (max-width: 890px) {
       flex-direction: column;
+    }
+    &_input {
+      width: 30%;
     }
     &_input,
     input {
@@ -144,6 +149,7 @@
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus {
       box-shadow: 0 0 0 30px $lightGreen inset;
+      color: $green !important;
     }
   }
 }
