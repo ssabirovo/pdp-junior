@@ -35,7 +35,7 @@ body {
   line-height: 26px;
   cursor: url("../images/cursor-pointer.svg"), auto;
 }
-@media (max-width: 730px) {
+@media (max-width: 890px) {
   .navbar_left a {
     display: none;
   }
@@ -49,11 +49,6 @@ body {
   color: #012a30;
   cursor: url("../images/cursor-pointer.svg"), auto;
 }
-@media (max-width: 730px) {
-  .navbar_right {
-    display: none !important;
-  }
-}
 .navbar_right * {
   transition: 0.3s linear;
 }
@@ -66,10 +61,15 @@ body {
   animation-name: rotatePhone;
   animation-duration: 0.3s;
 }
+@media (max-width: 890px) {
+  .navbar_right {
+    display: none !important;
+  }
+}
 .navbar_hamBar {
   display: none;
 }
-@media (max-width: 730px) {
+@media (max-width: 890px) {
   .navbar_hamBar {
     display: inline;
   }
@@ -87,6 +87,7 @@ body {
   }
 }
 .dropDownMenu {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -110,6 +111,11 @@ body {
   display: flex;
   height: max-content;
   padding: 1rem;
+}
+@media (min-width: 890px) {
+  .dropDownMenu.open {
+    display: none;
+  }
 }
 
 .header {
@@ -600,7 +606,7 @@ body {
   }
 }
 .contacts_form_input {
-  width: 30%;
+  min-width: 30%;
 }
 .contacts_form_input,
 .contacts_form input {
@@ -692,9 +698,6 @@ body {
   padding: 1.5rem 0;
   border-bottom: 1px solid #dbf9d8;
 }
-.footer_up i {
-  cursor: url("../images/cursor-pointer.svg"), auto;
-}
 .footer_up img {
   width: 100px;
   cursor: url("../images/cursor-pointer.svg"), auto;
@@ -705,6 +708,9 @@ body {
   font-weight: 700;
   font-size: 20px;
   cursor: url("../images/cursor-pointer.svg"), auto;
+}
+.footer_up a img {
+  width: 40px;
 }
 .footer_up_linksSmall {
   padding-bottom: 1.5rem;

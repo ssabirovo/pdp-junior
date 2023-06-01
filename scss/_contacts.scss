@@ -119,12 +119,12 @@
   &_form {
     padding: 2rem 0rem;
     width: 100%;
-    
+
     @media (max-width: 890px) {
       flex-direction: column;
     }
     &_input {
-      width: 30%;
+      min-width: 30%;
     }
     &_input,
     input {

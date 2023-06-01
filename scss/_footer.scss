@@ -5,9 +5,7 @@
   &_up {
     padding: 1.5rem 0;
     border-bottom: 1px solid $lightGreen;
-    i {
-      cursor: url("../images/cursor-pointer.svg"), auto;
-    }
+
     img {
       width: 100px;
       cursor: url("../images/cursor-pointer.svg"), auto;
@@ -18,6 +16,9 @@
       font-weight: 700;
       font-size: 20px;
       cursor: url("../images/cursor-pointer.svg"), auto;
+      img {
+        width: 40px;
+      }
     }
     &_linksSmall {
       padding-bottom: 1.5rem;
