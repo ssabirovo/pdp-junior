@@ -63,6 +63,10 @@
 
     <!-- dropdown menu -->
 
+    <div class="up">
+      <i class="fa-2x fa-solid fa-chevron-up"></i>
+    </div>
+
     <!-- header? -->
     <div class="header d-flex justify-content-start align-items-center">
       <div class="header_card">
@@ -581,6 +585,20 @@
       const toggleBtn = document.querySelector(".navbar_hamBar");
       const toggleBtnIcon = document.querySelector(".navbar_hamBar i");
       const dropDownMenu = document.querySelector(".dropDownMenu");
+      const upBtn = document.querySelector(".up");
+
+      window.onscroll = () => {
+        console.log(window.scrollY);
+        if (window.scrollY === 0) {
+          upBtn.classList.remove("hiddenUp");
+        } else {
+          upBtn.classList.add("hiddenUp");
+        }
+      };
+
+      upBtn.onclick = () => {
+        window.scrollTo(0, 0);
+      };
 
       toggleBtn.onclick = () => {
         dropDownMenu.classList.toggle("open");
