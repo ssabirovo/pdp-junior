@@ -588,11 +588,12 @@
       const upBtn = document.querySelector(".up");
 
       window.onscroll = () => {
-        console.log(window.scrollY);
-        if (window.scrollY === 0) {
-          upBtn.classList.remove("hiddenUp");
+        if (window.scrollY <= 110) {
+          upBtn.classList.remove("show");
         } else {
-          upBtn.classList.add("hiddenUp");
+          dropDownMenu.classList.remove("open");
+          toggleBtnIcon.classList = "fa-2x fa-solid fa-bars-staggered";
+          upBtn.classList.add("show");
         }
       };
 
