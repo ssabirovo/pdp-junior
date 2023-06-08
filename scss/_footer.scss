@@ -7,8 +7,11 @@
     border-bottom: 1px solid $lightGreen;
 
     img {
-      width: 100px;
+      width: 160px;
       cursor: url("../images/cursor-pointer.svg"), auto;
+      @media (max-width: 586px) {
+        width: 90px;
+      }
     }
     a {
       text-decoration: none;
@@ -20,6 +23,9 @@
         width: 40px;
       }
     }
+    &_phone {
+      width: 160px;
+    }
     &_linksSmall {
       padding-bottom: 1.5rem;
       display: none !important;
@@ -30,6 +36,7 @@
         font-size: 20px;
         cursor: url("../images/cursor-pointer.svg"), auto;
       }
+
       @media (max-width: 586px) {
         display: flex !important;
         border-bottom: 1px solid $lightGreen;

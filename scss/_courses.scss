@@ -1,7 +1,7 @@
 .courses {
   min-height: max-content;
   background-color: $white;
-  // border-radius: 24px;
+  // border-radius: 24px;image.png
   padding: 5.5rem 9%;
   gap: 5rem;
   &_card {
@@ -66,6 +66,7 @@
             justify-content: center;
           }
           @media (max-width: 540px) {
+            text-align: center;
             flex-direction: column;
             gap: 1rem;
           }
