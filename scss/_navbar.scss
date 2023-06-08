@@ -1,7 +1,7 @@
 .navbar {
   padding: 0.5rem 9%;
-  background: linear-gradient(89.9deg, $main 43.9%, $secondary 80.17%);
-  border-radius: 24px;
+  background: linear-gradient(89.9deg, $main 43.9%, $green 80.17%);
+  // border-radius: 24px;
   height: 8vh;
 
   &_left {
@@ -23,11 +23,11 @@
     }
   }
   &_right {
-    color: $main;
-
+    color: $white;
     a {
+      font-size: 22px;
       text-decoration: none;
-      color: $main;
+      color: $white;
       cursor: url("../images/cursor-pointer.svg"), auto;
     }
 
@@ -81,7 +81,7 @@
   gap: 20px;
   height: 0;
   overflow: hidden;
-transition: 0.2s cubic-bezier(0.0175, 0.0885, 0.032, 1.0275);
+  transition: 0.2s cubic-bezier(0.0175, 0.0885, 0.032, 1.0275);
 
   a {
     color: $main;

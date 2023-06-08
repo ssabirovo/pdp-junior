@@ -17,8 +17,7 @@ body {
 
 .navbar {
   padding: 0.5rem 9%;
-  background: linear-gradient(89.9deg, #012a30 43.9%, #88f036 80.17%);
-  border-radius: 24px;
+  background: linear-gradient(89.9deg, #012a30 43.9%, #00b534 80.17%);
   height: 8vh;
 }
 .navbar_left {
@@ -41,12 +40,13 @@ body {
   }
 }
 .navbar_right {
-  color: #012a30;
+  color: #ffffff;
   cursor: url("../images/cursor-pointer.svg"), auto;
 }
 .navbar_right a {
+  font-size: 22px;
   text-decoration: none;
-  color: #012a30;
+  color: #ffffff;
   cursor: url("../images/cursor-pointer.svg"), auto;
 }
 .navbar_right p {
@@ -146,7 +146,6 @@ body {
   padding: 0.5rem 9%;
   height: 92vh;
   background-color: #ffffff;
-  border-radius: 24px;
   background-image: url("../images/fff 1.svg");
   background-position: right;
   background-size: cover;
@@ -232,14 +231,13 @@ body {
 }
 
 .title {
-  background-color: #88f036;
+  background-color: #00b534;
   padding: 1rem;
-  border-radius: 24px;
 }
 .title h3 {
   font-weight: 800;
   font-size: 33px;
-  color: #012a30;
+  color: #ffffff;
   margin: 0;
   width: max-content;
 }
@@ -252,7 +250,6 @@ body {
 .parents {
   min-height: max-content;
   background-color: #ffffff;
-  border-radius: 24px;
   padding: 3.5rem 9%;
   display: flex;
   flex-direction: column;
@@ -374,7 +371,6 @@ body {
 .whom {
   min-height: 100vh;
   background-color: #ffffff;
-  border-radius: 24px;
   background-image: url("../images/courses-bg.png");
   background-position: center;
   background-size: cover;
@@ -417,7 +413,6 @@ body {
 .courses {
   min-height: max-content;
   background-color: #ffffff;
-  border-radius: 24px;
   padding: 5.5rem 9%;
   gap: 5rem;
 }
@@ -501,7 +496,6 @@ body {
 .contacts {
   height: max-content;
   background-color: #ffffff;
-  border-radius: 24px;
   padding: 5.5rem 1%;
 }
 .contacts_news {
